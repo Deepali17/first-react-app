@@ -12,25 +12,37 @@ const [userInput, setUserInput] = useState({
 });
     const titleChangeHandler = (event) => {
        // setEnteredTitle(event.target.value);
-       setUserInput({
-           ...userInput,
-           enteredTitle: event.target.value
-       });
+    //    setUserInput({
+    //        ...userInput,
+    //        enteredTitle: event.target.value
+    //    });
+    setUserInput((prevState) => {
+        return {  ...userInput,
+            enteredTitle: event.target.value }
+      });
     }
 
     const amountChangeHandler = event => {
         // setEnteredAmount(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredAmount: event.target.value
-        });
+        // setUserInput({
+        //     ...userInput,
+        //     enteredAmount: event.target.value
+        // });
+        setUserInput((prevState) => {
+            return {  ...userInput,
+                enteredAmount: event.target.value }
+          });
     }
 
     const dateChangeHandler = event => {
         // setEnteredDate(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredDate: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     enteredDate: event.target.value
+        // });
+        setUserInput((prevState) => {
+          return {  ...userInput,
+            enteredDate: event.target.value }
         });
     }
     return <form>
